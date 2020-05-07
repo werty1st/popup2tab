@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>TheOne Extension Options</title>
+      <link rel="stylesheet" href="style/popup.css">
+   </head>
+   <body>
+
+    <h2>Page specific options</h2>
+    <p>
+      <label class="form-switch">
+        <input type="checkbox" checked id="whitelisted_checkbox">
+        <i></i>
+          <span id="desciption">{{desciption}}</span> 
+      </label>      
+    </p>
+
+    <hr>
+    <!-- TODO customize url -->
+    <p>
+      <i>TODO: implement url customization</i>
+      <form action="#" class="simple-form">        
+        <input type="url" id="whitelisted_url" placeholder="URL" required disabled>
+      </form>
+    </p>
+
+    <hr>
+
+    <a href="#" id="go-to-options">Go to options</a>
+
+    <script src="popup.js"></script>
+   </body>
+</html>
