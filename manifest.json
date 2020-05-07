@@ -23,9 +23,14 @@
       "default_popup": "popup.html",
       "default_title": "Open link in same tab, pop-up as tab [Free]"
    },
-   "options_page": "options.html",
    "options_ui": {
       "page": "options.html",
       "open_in_tab": false
-   }   
+   },
+   "browser_specific_settings": {
+      "gecko": {
+        "id": "popup2tab@wrty.eu",
+        "strict_min_version": "58.0"
+      }
+    }    
 }
