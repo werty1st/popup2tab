@@ -1,4 +1,4 @@
-// zip -1 -x "*screens*" -x "*/\.*" x ".*"  -x "*.zip" -r addon.zip .
+// zip -1 -x "*screen*" -x "*/\.*" x ".*"  -x "*.zip" -r addon.zip .
 
 
 var urlList = {}; 
