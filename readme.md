@@ -23,17 +23,17 @@ The updated version is able to switch between blacklist and whitelist mode.
 The default setting is the blacklist mode. All Popups are converted to Tabs.
 
 If you want to disable that behavior disable the switch on that specific site.
-* ![](/screen/option1.png =500x)
+* ![](./screen/option1.png =500x)
 
 ### Whitelist Mode
 
 You can use the options to switch to the whitelist mode.
-* ![](/screen/option2.png =500x)
+* ![](./screen/option2.png =500x)
 
 All new popups are untouched until specifically enabled.
-* ![](/screen/option3.png =500x)
+* ![](./screen/option3.png =500x)
 
 Page whitelisted
-* ![](/screen/option4.png =500x)
+* ![](./screen/option4.png =500x)
 
 
