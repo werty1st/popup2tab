@@ -1,3 +1,6 @@
+// zip -1 -x "*screens*" -x "*/\.*" x ".*"  -x "*.zip" -r addon.zip .
+
+
 var urlList = {}; 
 
 // Saves options to chrome.storage

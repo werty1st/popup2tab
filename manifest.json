@@ -2,7 +2,7 @@
    "name": "Open link in same tab, pop-up as tab",
    "short_name": "popup2tab",
    "description": "Forces Chrome to open new tabs instead of pop-up windows and/or links in the same tab by default instead of new or background tab.",
-   "version": "3.1",
+   "version": "3.1.2",
    "manifest_version": 2,
    "background": {
       "scripts": [ "background.js" ]
@@ -15,13 +15,8 @@
    },
    "permissions": [ "tabs", "storage" ],
 
-   "content_scripts": [ {
-      "js": [ "contentscript.js" ],
-      "matches": [ "http://*/*", "https://*/*" ]
-   } ],
 
    "web_accessible_resources": [ "style/*" ],
-   "content_security_policy": "script-src 'self'; object-src 'self'",
 
    "browser_action": {
       "default_icon": "images/icon48.png",
