@@ -9,7 +9,7 @@ function save_options(reload) {
     urlList: JSON.stringify(urlList),
   }, function() {
     console.log('Options saved');
-    if (reload == true ) { chrome.runtime.reload(); }
+    if (reload == true ) {  setTimeout( ()=>chrome.runtime.reload(), 1000) }
   });
 }
 
@@ -41,23 +41,23 @@ window.onload = function restore_options() {
     }
 
     //find current url to blacklist
-    chrome.tabs.query({'active': true, 'windowId': chrome.windows.WINDOW_ID_CURRENT},
-    function(tabs){
-      const URL = tabs[0].url;
+    chrome.tabs.query(
+      {'active': true, 'windowId': chrome.windows.WINDOW_ID_CURRENT},
+      function( [tab]){
+        const URL = tab.url;
 
-      document.querySelector('#whitelisted_url').value = URL;
+        document.querySelector('#whitelisted_url').value = URL;
 
-      //if url ins settings set checkbox
-      if (URL in urlList){
-        document.querySelector('#whitelisted_checkbox').checked = urlList[URL];
-      } else {
-        //set state based on global default
-        //blacklist mode or whitelist mode
-        document.querySelector('#whitelisted_checkbox').checked = items.t1pop;
+        //if url ins settings set checkbox
+        if (URL in urlList){
+          document.querySelector('#whitelisted_checkbox').checked = urlList[URL];
+        } else {
+          //set state based on global default
+          //blacklist mode or whitelist mode
+          document.querySelector('#whitelisted_checkbox').checked = items.t1pop;
+        }
       }
-
-      
-    });    
+    );    
 
 	  console.log('Options restored');
   });
@@ -72,14 +72,15 @@ window.onload = function restore_options() {
 document.getElementById('whitelisted_checkbox').addEventListener('click', function(e) {
 
   //find current url to blacklist
-  chrome.tabs.query({'active': true, 'windowId': chrome.windows.WINDOW_ID_CURRENT},
-  function(tabs){
-     const URL = tabs[0].url;
-     urlList[URL] =  e.target.checked;
-     save_options(true);
-  });
+  chrome.tabs.query(
+    {'active': true, 'windowId': chrome.windows.WINDOW_ID_CURRENT},
+    function([tab]){
+      const URL = tab.url;
+      urlList[URL] = e.target.checked;
+      save_options(true);
+    }
+  );
 
-  //save url+state
   
 });
 
