@@ -1,18 +1,3 @@
-# Disclaimer
-
-This addon is taken from dev@sergiy.net at
-https://chrome.google.com/webstore/detail/open-link-in-same-tab-pop/jmphljmgnagblkombahigniilhnbadca
-
-
-I modified it because some Multimessenger Addons don't load from a "chrome://extensions/" URL anymore. As result they where captured by the original plugin and converted to a Tab.
-
-This causes the messengers to lose the ability to create their own taskbar icon for faster and easier access.
-
-## Github
-_Because I coudn't find a public github repository of the original extension, to file a merge request, i created a new one._
-
-
-
 
 # Usage
 
